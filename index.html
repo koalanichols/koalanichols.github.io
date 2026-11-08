@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agenda Edu Automação</title>
+  <meta name="description" content="A personal tool that turns school notification emails into calendar events and daily and weekly summaries.">
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1c2430;
+      --muted: #55606e;
+      --link: #0b6e69;
+      --rule: #d9dee4;
+      color-scheme: light dark;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14181d;
+        --text: #e6e9ed;
+        --muted: #a3acb8;
+        --link: #5cc7c0;
+        --rule: #2b333c;
+      }
+    }
+    html { background: var(--bg); }
+    body {
+      margin: 0;
+      padding: 3rem 1.25rem 4rem;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      color: var(--text);
+    }
+    main { max-width: 40rem; margin: 0 auto; }
+    h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 0.5rem; }
+    h2 { font-size: 1.2rem; margin: 2.25rem 0 0.5rem; }
+    p, li { margin: 0.6rem 0; }
+    ul { padding-left: 1.25rem; }
+    .lead { font-size: 1.1rem; color: var(--muted); margin-bottom: 1.5rem; }
+    a { color: var(--link); text-underline-offset: 0.15em; }
+    a:focus-visible { outline: 3px solid var(--link); outline-offset: 3px; border-radius: 2px; }
+    footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.95rem; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Agenda Edu Automação</h1>
+    <p class="lead">A personal tool that turns school notification emails into calendar events and short daily and weekly summaries.</p>
+
+    <h2>What it does</h2>
+    <p>The school sends its announcements through the Agenda Edu platform by email. This tool reads only the messages the owner has labeled <em>AgendaEdu</em> in Gmail, then:</p>
+    <ul>
+      <li>extracts the student, the category, the summary, and any dates or deadlines;</li>
+      <li>creates Google Calendar events, with reminders one week and one day ahead, for items that have a confirmed date;</li>
+      <li>sends the owner a summary each day and a recap each week, by email and by WhatsApp.</li>
+    </ul>
+
+    <h2>Who uses it</h2>
+    <p>It is a private tool built and used by one person, its developer, for their own family. It is not offered to the public, and no one else signs in to it.</p>
+
+    <h2>Google permissions</h2>
+    <p>The tool asks for three Google permissions, each for one purpose:</p>
+    <ul>
+      <li><strong>Read Gmail messages</strong> (<code>gmail.readonly</code>), to read the labeled school emails.</li>
+      <li><strong>Send Gmail messages</strong> (<code>gmail.send</code>), to email the summaries to the owner.</li>
+      <li><strong>Manage Google Calendar events</strong> (<code>calendar</code>), to add the school events to the owner’s calendar.</li>
+    </ul>
+    <p>See the <a href="privacy.html">Privacy Policy</a> for how this data is handled.</p>
+
+    <footer>
+      Questions: open an issue or message the developer through the
+      <a href="https://github.com/koalanichols">GitHub profile</a>.
+    </footer>
+  </main>
+</body>
+</html>
